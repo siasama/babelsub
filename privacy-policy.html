@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>巴别英语（BabelSub）隐私政策 / Privacy Policy</title>
+  <meta name="description" content="巴别英语（BabelSub）隐私政策 / Privacy Policy">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #121a2b;
+      --text: #e8eefc;
+      --muted: #aeb9d6;
+      --line: #26324d;
+      --accent: #7aa2ff;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f6f8ff;
+        --card: #ffffff;
+        --text: #1d2435;
+        --muted: #5d6986;
+        --line: #e3e8f7;
+        --accent: #325bd8;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC",
+        "Hiragino Sans GB", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 24px 16px 56px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 14px;
+    }
+    h1, h2, h3 { margin: 0 0 10px; line-height: 1.3; }
+    h1 { font-size: 1.7rem; }
+    h2 { font-size: 1.15rem; margin-top: 4px; }
+    p, ul { margin: 8px 0; }
+    ul { padding-left: 18px; }
+    .muted { color: var(--muted); }
+    .lang {
+      display: inline-block;
+      font-size: 12px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    a { color: var(--accent); }
+    .footer {
+      margin-top: 24px;
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+    }
+    code {
+      padding: 2px 6px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: .92em;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <span class="lang">中文</span>
+      <h1>巴别英语（BabelSub）隐私政策</h1>
+      <p class="muted">最后更新：2026-10-18</p>
+      <p>巴别英语（英文名 BabelSub）是一款运行在 iPhone、iPad 与 Mac 上的字幕与播放应用。本政策说明应用实际如何处理信息。</p>
+
+      <h2>1. 我们不做什么</h2>
+      <ul>
+        <li>不集成广告 SDK，不进行跨 App 跟踪，不出售个人信息。</li>
+        <li>付费为 Premium 月度订阅、年度订阅，以及一次性永久解锁。订阅由 Apple 收取并自动续订；永久解锁由 Apple 收取一次，不自动续订。不出售按次次数包。</li>
+        <li>我们不经手银行卡号或 Apple ID 密码。</li>
+      </ul>
+
+      <h2>2. 留在设备上的数据</h2>
+      <p>你导入或缓存的音视频、字幕、转录结果、播放进度和应用设置，主要保存在本机。整集字幕由设备上的 Whisper 生成，音频不会为了转录而上传。系统「翻译」使用系统 Translation，待译句子不发到巴别英语的服务器。</p>
+      <p>你自行填写的 API 密钥、自建中继令牌和课程浏览器代理密码保存在系统钥匙串。课程浏览器会把网站 Cookie 等数据放在单独的本机存储里。删除 App 会清除这些本机数据。</p>
+
+      <h2>3. 会离开设备的数据</h2>
+      <p>只有在你使用对应功能时才会发生：</p>
+      <ul>
+        <li><strong>Apple 购买与恢复：</strong>付款由 Apple 处理。应用通过 StoreKit 确认当前 Apple ID 是否拥有有效的月度订阅、年度订阅或永久解锁，以便打开 Premium。应用不保存支付凭证。</li>
+        <li><strong>目录搜索：</strong>搜索词会发给 Apple 的 iTunes Search 与 Lookup，用来返回播客目录。你自行配置 Podcast Index 后，搜索词会发给 <code>https://api.podcastindex.org</code>；密钥留在本机钥匙串。巴别英语的服务器不保存这些搜索记录。</li>
+        <li><strong>点词音标：</strong>英语词先查本机词典。本机没有音标时，这个词会发给 <code>https://api.dictionaryapi.dev</code>。中继已启用，且该主机当前走中继或直连失败后回退时，同一请求会经中继转发。</li>
+        <li><strong>Whisper 模型下载：</strong>你可以另行下载模型。文件来自 <code>https://hf-mirror.com</code> 上的官方 ggml 权重。</li>
+        <li><strong>公开节目源中继：</strong>当你启用中继（包括 Premium 提供的基础中继，或你自己填写的服务器）时，你主动打开的公开 RSS、音频、视频或 TED 等链接会经该中继拉取。传输期间，中继服务器会看到目标网址和所传输的内容。按当前服务器配置，不记录访问日志，传输完成后不保留该内容。默认不经中继发送 AI 摘要正文，也不经中继下载 Whisper 模型。</li>
+        <li><strong>课程浏览器代理：</strong>当你为名校公开课浏览器启用代理（包括 Premium 的会员基础款，或你自己的代理）时，课程网页及其子资源会经该代理传输。传输期间，代理会看到所访问的网址和页面流量。按当前服务器配置，不记录访问日志，传输完成后不保留该内容。</li>
+        <li><strong>AI 云端摘要：</strong>仅在你主动发起，并已阅读应用内说明之后，把已生成的字幕文本发送到兼容接口。不发送音频，不发送视频。免费用户使用自己保存的 API 密钥和自己填写的接口地址。Premium 用户若未另行填写地址，文本会发到 <code>https://api.deepseek.com/anthropic</code>，并使用应用内置密钥，因此该文本会出现在此服务商下的开发者账号中。你若填写了自己的地址，则发到该地址，并使用你自己的密钥。接收方按其自身政策处理文本。</li>
+        <li><strong>系统分享：</strong>你通过系统分享导出的内容，由你选择的目标应用处理。</li>
+      </ul>
+
+      <h2>4. 权限</h2>
+      <ul>
+        <li>相机：扫描中继配置二维码。</li>
+        <li>相册：从相册选择中继配置二维码图片。</li>
+        <li>后台音频：用于后台继续播放。</li>
+        <li>当前版本不请求麦克风权限。</li>
+      </ul>
+
+      <h2>5. 系统与内容</h2>
+      <p>支持 iOS 18 或更高版本，以及 macOS 15 或更高版本。</p>
+      <p>目录中的播客、TED、公开课等内容来自公开 RSS、公开目录，或你自己导入的文件与链接。相关音频、封面、标题与节目说明的版权归原权利人。本应用不主张对这些内容的所有权。权利人如认为展示不当，请用文末方式联系。</p>
+
+      <h2>6. 订阅</h2>
+      <p>Premium 包括月度与年度自动续订，以及一次性永久解锁。订阅的扣款、续订和取消在 Apple ID 的订阅管理中处理。永久解锁不自动续订，也不会自动取消已有订阅。可在 App 内使用「恢复购买」。免费版对整集转录和字幕导出设有次数上限；激活 Premium 后这两项额度放开。字幕文件导入与实时字幕不限次。</p>
+
+      <h2>7. 你的控制</h2>
+      <p>你可以关闭中继、改用自己的服务器、删除自定义 API 密钥，在课程浏览器中使用「清除浏览器数据」，也可以在系统设置中关闭相机和相册权限。删除 App 可移除本机数据。</p>
+
+      <h2>8. 未成年人</h2>
+      <p>本应用不以未成年人为目标用户，也不会有意收集未成年人个人信息。</p>
+
+      <h2>9. 政策更新</h2>
+      <p>我们可能更新本政策。更新后会在本页面发布最新版本，并修改上方日期。</p>
+
+      <h2>10. 联系方式</h2>
+      <p>隐私问题请联系：<code>543443966@qq.com</code></p>
+    </section>
+
+    <section class="card">
+      <span class="lang">English</span>
+      <h1>BabelSub (巴别英语) Privacy Policy</h1>
+      <p class="muted">Last updated: 2026-10-18</p>
+      <p>BabelSub (Chinese name 巴别英语) is a subtitle and playback app for iPhone, iPad, and Mac. This policy describes what the app actually does with information.</p>
+
+      <h2>1. What we do not do</h2>
+      <ul>
+        <li>We do not ship an advertising SDK, we do not track you across apps, and we do not sell personal information.</li>
+        <li>Paid access is a Premium monthly subscription, a Premium yearly subscription, or a one-time lifetime unlock. Subscriptions are billed and auto-renewed by Apple. The lifetime unlock is a single Apple charge and does not auto-renew. There is no consumable credit pack.</li>
+        <li>We never see your card number or Apple ID password.</li>
+      </ul>
+
+      <h2>2. Data that stays on the device</h2>
+      <p>Audio and video you import or cache, subtitles, transcripts, playback progress, and app settings stay primarily on the device. Full-episode subtitles are produced by Whisper on the device, and audio is not uploaded for transcription. System translation uses the system Translation framework, and the sentences being translated are not sent to BabelSub’s servers.</p>
+      <p>An API key you enter, a relay token for a server you configure, and a course-browser proxy password are stored in the system keychain. The course browser keeps website cookies and similar data in a separate on-device store. Deleting the app removes this on-device data.</p>
+
+      <h2>3. Data that leaves the device</h2>
+      <p>This happens only when you use the matching feature:</p>
+      <ul>
+        <li><strong>Apple purchases and restore:</strong> Apple processes the payment. The app uses StoreKit to see whether the current Apple ID has an active monthly subscription, yearly subscription, or lifetime unlock, so it can turn Premium on. The app does not store payment credentials.</li>
+        <li><strong>Catalog search:</strong> Search terms are sent to Apple’s iTunes Search and Lookup to return podcast catalogs. If you configure Podcast Index, search terms are sent to <code>https://api.podcastindex.org</code>; the key stays in the on-device keychain. BabelSub’s servers do not keep these search records.</li>
+        <li><strong>Word phonetics:</strong> English words are looked up in the on-device dictionary first. When that dictionary has no phonetic, the word is sent to <code>https://api.dictionaryapi.dev</code>. If relay is on and that host is already using relay, or the direct request fails and falls back, the same request is forwarded through the relay.</li>
+        <li><strong>Whisper model downloads:</strong> You can download additional models. The files are official ggml weights from <code>https://hf-mirror.com</code>.</li>
+        <li><strong>Public-source relay:</strong> When relay is on (the Premium basic relay, or a server you enter), public RSS, audio, video, or TED links you open are fetched through that relay. During the transfer, the relay sees the target URL and the content being transferred. The current server configuration does not record access logs and does not keep that content after the transfer. AI-summary text and Whisper model downloads are not sent through the relay by default.</li>
+        <li><strong>Course-browser proxy:</strong> When the university-course browser proxy is on (the Premium basic profile, or a proxy you enter), course pages and their subresources travel through that proxy. During the transfer, the proxy sees the requested URLs and the page traffic. The current server configuration does not record access logs and does not keep that content after the transfer.</li>
+        <li><strong>AI cloud summary:</strong> Only after you start a summary and have read the in-app disclosure, the app sends existing subtitle text to a compatible endpoint. It does not send audio or video. Free users use an API key they saved and an endpoint they entered. If a Premium user has not entered a different address, the text is sent to <code>https://api.deepseek.com/anthropic</code> with the app’s built-in key, so the text is visible in the developer account at that provider. If you enter your own address, the text goes there with your own key. The recipient handles the text under its own policy.</li>
+        <li><strong>System share sheet:</strong> Content you export is handled by the app you choose.</li>
+      </ul>
+
+      <h2>4. Permissions</h2>
+      <ul>
+        <li>Camera: scan a relay-configuration QR code.</li>
+        <li>Photo library: choose a relay-configuration QR image.</li>
+        <li>Background audio: keep playback going in the background.</li>
+        <li>This version does not request microphone access.</li>
+      </ul>
+
+      <h2>5. Systems and content</h2>
+      <p>The app requires iOS 18 or later, and macOS 15 or later.</p>
+      <p>Podcasts, TED talks, and open courses in the catalog come from public RSS feeds, public catalogs, or files and links you import. Copyright in the audio, artwork, titles, and descriptions stays with the original rights holders. This app does not claim ownership of that material. Rights holders can contact us at the address below.</p>
+
+      <h2>6. Subscriptions</h2>
+      <p>Premium is a monthly or yearly auto-renewing subscription, or a one-time lifetime unlock. Subscription charges, renewal, and cancellation are handled in the Apple ID subscription settings. The lifetime unlock does not auto-renew and does not cancel an existing subscription. Restore Purchases is available in the app. The free tier has a limited number of full-episode transcriptions and subtitle exports. Premium removes those two limits. Subtitle-file import and live captions are not limited.</p>
+
+      <h2>7. Your control</h2>
+      <p>You can turn relay off, use your own server, delete a custom API key, use “清除浏览器数据” in the course browser, and revoke camera or photo access in system settings. Deleting the app removes on-device data.</p>
+
+      <h2>8. Children</h2>
+      <p>This app is not directed to children, and it does not knowingly collect personal information from children.</p>
+
+      <h2>9. Changes</h2>
+      <p>We may update this policy. The new text will be posted on this page, and the date above will change.</p>
+
+      <h2>10. Contact</h2>
+      <p>Privacy questions: <code>543443966@qq.com</code></p>
+    </section>
+
+    <p class="footer">巴别英语（BabelSub）</p>
+  </main>
+</body>
+</html>
